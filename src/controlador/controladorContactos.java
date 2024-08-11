@@ -4,10 +4,21 @@
  */
 package controlador;
 
-/**
- *
- * @author uptc-
- */
+import javax.swing.table.DefaultTableModel;
+import modelo.contacto;
+import modelo.contactoDAO;
+import vista.HomeAgenda;
+
+
 public class controladorContactos {
     
+    contacto objetoContacto;
+    contactoDAO objetoContactoDAO;
+
+    DefaultTableModel modeloCliente = new DefaultTableModel();
+    HomeAgenda FormularioHomeAgenda;
+    String filtroCliente = "";
+
+
+
 }

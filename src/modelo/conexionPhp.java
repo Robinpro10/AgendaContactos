@@ -20,7 +20,7 @@ public class conexionPhp {
     private String url="jdbc:mysql://localhost:3306/"+bd;
     private Connection connection=null;
     
-    public Connection getConexion(){
+    public Connection getConexionPhp(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             connection = (Connection)DriverManager.getConnection(this.url, this.user, this.password);
