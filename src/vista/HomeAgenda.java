@@ -132,7 +132,7 @@ public class HomeAgenda extends javax.swing.JFrame {
         contactos.setName(""); // NOI18N
         contactos.setOpaque(true);
 
-        agregarContacto.setBackground(new java.awt.Color(204, 255, 255));
+        agregarContacto.setBackground(new java.awt.Color(204, 204, 255));
 
         jPanel3.setBackground(new java.awt.Color(35, 123, 175));
 
@@ -241,7 +241,7 @@ public class HomeAgenda extends javax.swing.JFrame {
 
         contactos.addTab("Agregar Contanto", agregarContacto);
 
-        agendaContacto.setBackground(new java.awt.Color(153, 172, 164));
+        agendaContacto.setBackground(new java.awt.Color(204, 204, 255));
 
         jPanel4.setBackground(new java.awt.Color(35, 123, 175));
 

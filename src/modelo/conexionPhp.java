@@ -1,37 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author uptc-
- */
-public class conexionPhp {
+public class ConexionPhp {
 
-    private String bd="agendacontactos";
-    private String user="root";
-    private String password="";
-    private String url="jdbc:mysql://localhost:3306/"+bd;
-    private Connection connection=null;
-    
-    public Connection getConexionPhp(){
-        try{
+    private String bd = "agendacontactos";
+    private String user = "root";
+    private String password = "";
+    private String url = "jdbc:mysql://localhost:3306/" + bd + "?useSSL=false&serverTimezone=UTC";
+
+    private Connection connection = null;
+
+    public Connection conexionPhp() {
+        try {
+            // Cargar el driver JDBC para MySQL
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = (Connection)DriverManager.getConnection(this.url, this.user, this.password);
-            System.out.println("bien");
-        }catch(SQLException e){
-            System.err.println(e);    
-            System.out.println("mal, error entre la silla y el pc:c");
-        } catch (ClassNotFoundException e){
-            java.util.logging.Logger.getLogger(conexionPhp.class.getName()).log(java.util.logging.Level.SEVERE, null, e);
+
+            // Establecer la conexión con la base de datos
+            connection = DriverManager.getConnection(this.url, this.user, this.password);
+            System.out.println("Conexión exitosa");
+        } catch (SQLException e) {
+            System.err.println("Error en la conexión: " + e.getMessage());
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            System.err.println("Error: Clase no encontrada");
+            e.printStackTrace();
         }
         return connection;
     }
-    
 }
+

@@ -1,23 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package modelo;
 
-/**
- *
- * @author uptc-
- */
-public class contacto {
+public class Contacto {
     private String nombre;
     private String sobreNombre;
     private String correo;
     private String celular;
 
-    public contacto() {
+    public Contacto() {
     }
 
-    public contacto(String nombre, String sobreNombre, String correo, String celular) {
+    public Contacto(String nombre, String sobreNombre, String correo, String celular) {
         this.nombre = nombre;
         this.sobreNombre = sobreNombre;
         this.correo = correo;
